@@ -63,3 +63,33 @@ list-style: none;
 .btn:hover{
     background-color:#c9a15a;
 }
+.hero{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 570px;
+    text-align: center;
+    padding: 0 20px;
+}
+.text_head{
+    color: #e8a006;
+    font-size: 45px;
+    font-family: "Caveat", cursive;
+}
+.text{
+    color:white;
+    font-size: 60px;
+    font-weight: bold;
+}
+.btn_1{
+   padding: 15px 38px;
+    border: none;
+    border-radius: 30px;
+    background-color: #c89b3c;
+    color: white;
+    cursor: pointer; 
+}

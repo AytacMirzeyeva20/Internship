@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     background-color: #17110d;
+    color:#f5ead9 ;
+    font-family: "Jost", sans-serif;
+}
+.header{
+     background-image: url("https://preview.colorlib.com/theme/appetizer/images/bg_2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+}
+.nav{
+      position: relative;
+    display: flex;
+    align-items: center;
+    padding: 25px 60px;
+     background: rgba(23, 17, 13, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(201, 161, 90, 0.25);
+}
+.nav_logo{
+     text-decoration: none;
+    color: #f5ead9;
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.nav_item{
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+display: flex;
+gap: 30px;
+list-style: none;
+}
+.nav_item a{
+     text-decoration: none;
+    color: #f5ead9;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    transition: color 0.25s ease;
+}
+.nav_item a:hover{
+      color: #b8721f;
+}
+.btn{
+      margin-left: auto;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 30px;
+    background-color:#d98f3b;
+    color: #17110d;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:#c9a15a;
+}

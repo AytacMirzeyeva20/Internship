@@ -152,25 +152,25 @@
       </section>
       <section class="contact" id="contact">
     <div class="contact-form">
-        <form>
+        <form id="form">
             <h2>Contact Us</h2>
 
             <label>Name</label>
-            <input type="text" placeholder="Your Name...">
+            <input type="text" placeholder="Your Name..." id="name">
 
             <label>Email</label>
-            <input type="email" placeholder="info@restaurant.com">
+            <input type="email" placeholder="info@restaurant.com" id="gmail">
 
             <label>Subject</label>
-            <select>
-                <option>Restaurant About</option>
-                <option>Menu</option>
-                <option>Service</option>
-                <option>Location</option>
+            <select id="subject">
+                <option value="General">General</option>
+                <option value="Menu">Menu</option>
+                <option value="Support">Support</option>
+                <option value="Location">Location</option>
             </select>
 
             <label>Message</label>
-            <textarea placeholder="Write your message..."></textarea>
+            <textarea placeholder="Write your message..." id="message"></textarea>
 
             <button type="submit">Send Message</button>
         </form>
@@ -213,5 +213,6 @@
       </div>
     </footer>
     <script src="./script.js"></script>
+    <script src="./form.js"></script>
 </body>
 </html>

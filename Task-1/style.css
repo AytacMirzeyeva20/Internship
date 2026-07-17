@@ -446,6 +446,9 @@ margin-top:15px;
     color: #cdbfab;
 }
 
+#bar{
+    display: none;
+}
 
 @media screen and (max-width:1024px) {
 
@@ -484,6 +487,32 @@ margin-top:15px;
         flex-direction: column;
         gap:5px;
     }
+    #bar{
+        display: block;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    .nav{
+    position: relative;
+}
+
+.nav_item.active{
+    position: absolute;
+    top: 70px;    
+    right: 20px;
+    left: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+  
+  .nav_item.active .nav_list a{
+    color: black;
+}
 }
 
 @media  screen and (max-width:768px) {
@@ -524,6 +553,31 @@ margin-top:15px;
         flex-direction: column;
         gap:5px;
     }
+     #bar{
+        display: block;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    .nav{
+    position: relative;
+}
+
+.nav_item.active{
+    position: absolute;
+    top: 70px;      
+    right: 20px;
+    left: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+  .nav_item.active .nav_list a{
+    color: black;
+}
 }
 
 @media  screen and (max-width:480px) {
@@ -581,4 +635,29 @@ font-size: 16px;
     .contact-map{
         width: 100%;
     }
+     #bar{
+        display: block;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+ .nav{
+    position: relative;
+}
+
+.nav_item.active{
+    position: absolute;
+    top: 70px;     
+    right: 20px;
+    left: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+    .nav_item.active .nav_list a{
+    color: black;
+}
 }

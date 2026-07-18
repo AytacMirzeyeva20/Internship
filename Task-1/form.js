@@ -6,12 +6,16 @@ const gmail=document.getElementById("gmail").value;
 const subject=document.getElementById("subject").value;
 const message=document.getElementById("message").value;
 const gmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!gmailRegex.test(gmail)) {
+if(name===""){
+    alert("Please enter your name");
+    return;
+}
+if (gmail === "") {
     alert("Please enter your email");
     return;
 }
-if(name===""){
-    alert("Please enter your name");
+if (!gmailRegex.test(gmail)) {
+    alert("Please enter a valid email");
     return;
 }
 if(message===""){

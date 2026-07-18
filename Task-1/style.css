@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 } 
+html {
+    scroll-behavior: smooth;
+}
 body{
      background-color: #17110d;
     color:#f5ead9 ;
@@ -451,7 +454,7 @@ margin-top:15px;
     border: none;
 }
 
-@media screen and (max-width:1024px) {
+@media(max-width:1024px) {
 
 .nav_item{
     display: none;
@@ -516,7 +519,7 @@ margin-top:15px;
 }
 }
 
-@media  screen and (max-width:768px) {
+@media(max-width:768px) {
     .header{
         background-position: center center;
     }
@@ -581,7 +584,7 @@ margin-top:15px;
 }
 }
 
-@media  screen and (max-width:480px) {
+@media(max-width:480px) {
     .header{
         height:550px;
     }

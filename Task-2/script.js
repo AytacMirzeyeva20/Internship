@@ -13,6 +13,18 @@ const card = document.createElement("div");
 card.className = "task";
 const title = document.createElement("p");
 title.textContent = task.title;
+ const actions = document.createElement("div");
+ actions.className = "task-actions";
+
+ const editIcon = document.createElement("i");
+ editIcon.className = "fa-regular fa-pen-to-square";
+
+ const deleteIcon = document.createElement("i");
+ deleteIcon.className = "fa-solid fa-trash-can";
+
+ actions.appendChild(editIcon);
+ actions.appendChild(deleteIcon);
+ card.appendChild(actions);
 card.appendChild(title);
 if (task.status === "todo") {
     todo.appendChild(card);

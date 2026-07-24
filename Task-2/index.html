@@ -10,49 +10,53 @@
 <body>
     <div class="container">
    <h1 class="head">Task List</h1>
+   <div class="add-task">
+        <input type="text" id="task-input" placeholder="Enter task...">
+        <button id="add-btn">Add Task</button>
     </div>
-    <div class="column">
+    </div>
+   <div class="column">
+
     <div class="column-box">
-    <div class="column-title">
-        <h2>To Do</h2>
-        <button><i class="fa-solid fa-plus"></i></button>
-    </div>
-    <div class="task">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="column-title">
+            <h2>To Do</h2>
+            <button id="todo-button"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <div class="task" id="todo-list"></div>
         <div class="task-actions">
             <i class="fa-regular fa-pen-to-square"></i>
             <i class="fa-solid fa-trash-can"></i>
         </div>
     </div>
-</div>
- <div class="column-box">
+
+    <div class="column-box">
         <div class="column-title">
             <h2>In Progress</h2>
-            <button><i class="fa-solid fa-plus"></i></button>
+            <button id="progress-button" ><i class="fa-solid fa-plus"></i></button>
         </div>
-         <div class="task">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <div class="task" id="progress-list"></div>
         <div class="task-actions">
             <i class="fa-regular fa-pen-to-square"></i>
             <i class="fa-solid fa-trash-can"></i>
         </div>
-    </div>
     </div>
 
     <div class="column-box">
         <div class="column-title">
             <h2>Done</h2>
-            <button><i class="fa-solid fa-plus"></i></button>
+            <button id="done-button"  ><i class="fa-solid fa-plus"></i></button>
         </div>
-          <div class="task">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <div class="task" id="done-list"></div>
         <div class="task-actions">
             <i class="fa-regular fa-pen-to-square"></i>
             <i class="fa-solid fa-trash-can"></i>
         </div>
     </div>
-    </div>
-    </div>
+
+</div>
     <script src="./script.js"></script>
 </body>
 </html>

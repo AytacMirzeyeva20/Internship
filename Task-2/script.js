@@ -15,12 +15,30 @@ const title = document.createElement("p");
 title.textContent = task.title;
  const actions = document.createElement("div");
  actions.className = "task-actions";
-
  const editIcon = document.createElement("i");
  editIcon.className = "fa-regular fa-pen-to-square";
-
  const deleteIcon = document.createElement("i");
  deleteIcon.className = "fa-solid fa-trash-can";
+
+ deleteIcon.addEventListener('click',()=>{
+    tasks=tasks.filter(item => item.id !== task.id);
+    renderTasks()
+ })
+ editIcon.addEventListener('click',()=>{
+    const newName=prompt("Yeni tapsiriq adini daxil edin:", task.title);
+      if (newName === null) {
+        return;
+    }
+
+    if (newName.trim() === "") {
+        alert("Tapsiriq adi bos ola bilməz.");
+        return;
+    }
+
+    task.title = newName.trim();
+
+    renderTasks();
+ })
 
  actions.appendChild(editIcon);
  actions.appendChild(deleteIcon);

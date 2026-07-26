@@ -54,3 +54,8 @@ background-color: #EEAECA;
 color: white;
 padding: 3px 7px;
 }
+#todo-list,
+#progress-list,
+#done-list {
+    min-height: 250px;
+}

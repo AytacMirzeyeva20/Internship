@@ -20,8 +20,8 @@
                 <li class="nav_list"><a href="#gallery">Gallery</a></li>
                 <li class="nav_list"><a href="#contact">Contact</a></li>
             </ul>
-   <button id="bar">
-<i class="fa-solid fa-bars"></i>
+  <button id="bar" aria-label="Open navigation" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
 </button>
               <button class="btn">Book Now</button>
         </nav>
@@ -156,23 +156,20 @@
     <div class="contact-form">
         <form id="form">
             <h2>Contact Us</h2>
-
-            <label>Name</label>
-            <input type="text" placeholder="Your Name..." id="name">
-
-            <label>Email</label>
-            <input type="email" placeholder="info@restaurant.com" id="gmail">
-
-            <label>Subject</label>
-            <select id="subject">
+<label for="name">Name</label>
+<input type="text" id="name">
+            <label for="gmail">Email</label>
+<input type="email" id="gmail">
+          <label for="subject">Subject</label>
+               <select id="subject">
                 <option value="General">General</option>
                 <option value="Menu">Menu</option>
                 <option value="Support">Support</option>
                 <option value="Location">Location</option>
             </select>
 
-            <label>Message</label>
-            <textarea placeholder="Write your message..." id="message"></textarea>
+            <label for="message">Message</label>
+<textarea id="message"></textarea>
 
             <button type="submit">Send Message</button>
         </form>

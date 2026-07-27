@@ -19,11 +19,13 @@ body{
     height: 650px;
 }
 .nav{
-      position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     padding: 25px 60px;
-     background: rgba(23, 17, 13, 0.4);
+    background: rgba(23, 17, 13, 0.9);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(201, 161, 90, 0.25);
 }
@@ -52,6 +54,9 @@ list-style: none;
 }
 .nav_item a:hover{
       color: #b8721f;
+}
+section{
+    scroll-margin-top: 90px;
 }
 .btn{
       margin-left: auto;
@@ -584,84 +589,3 @@ margin-top:15px;
 }
 }
 
-@media(max-width:480px) {
-    .header{
-        height:550px;
-    }
-.information{
-  display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 30px;
-        justify-items: center;
-        align-items: center;
-        padding: 30px 20px;
-}
-.info_1 i{
-    font-size: 22px;
-   
-}
-.info_title{
-font-size: 16px;
-        margin-top: 10px;
-}
-    .text_head{
-        font-size:28px;
-    }
-
-    .text{
-        font-size:34px;
-    }
-
-    .btn_1{
-        padding:12px 28px;
-    }
-
-    .menu_head{
-        font-size:28px;
-    }
-
-    .text_heading{
-        font-size:24px;
-    }
-
-    .info_1 i{
-        padding:15px;
-        font-size:20px;
-    }
-
-    .img{
-        height:220px;
-    }
-
-    .contact-form{
-        padding:20px;
-    }
-    .contact-map{
-        width: 100%;
-    }
-     #bar{
-        display: block;
-        margin-right: 20px;
-        font-size: 20px;
-    }
- .nav{
-    position: relative;
-}
-
-.nav_item.active{
-    position: absolute;
-    top: 70px;     
-    right: 20px;
-    left: auto;
-    transform: none;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-}
-    .nav_item.active .nav_list a{
-    color: black;
-}
-}

@@ -85,3 +85,70 @@ padding: 3px 7px;
     cursor: pointer;
     font-size: 16px;
 }
+
+@media (max-width: 768px) {
+
+    .controls{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #search,
+    #filter-value{
+        width: 100%;
+    }
+
+    .column{
+        flex-wrap: wrap;
+    }
+
+    .column-box{
+        flex: 1 1 100%;
+    }
+
+    .head{
+        text-align: center;
+    }
+
+    .add-task{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #task-input,
+    #add-btn{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .container,
+    .column{
+        width: 95%;
+    }
+
+    .head{
+        font-size: 24px;
+    }
+
+    .column-title h2{
+        font-size: 18px;
+    }
+
+    .task{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .task-actions i{
+        font-size: 18px;
+    }
+
+    button{
+        padding: 6px 10px;
+    }
+
+}

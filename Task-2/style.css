@@ -59,3 +59,29 @@ padding: 3px 7px;
 #done-list {
     min-height: 250px;
 }
+
+.controls{
+    width: 400px;
+    margin: 20px auto;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#search{
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #EEAECA;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+#filter-value{
+    padding: 10px 15px;
+    border: 1px solid #EEAECA;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}

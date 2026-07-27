@@ -5,6 +5,8 @@ const progress=document.getElementById("progress-list");
 const done=document.getElementById("done-list");
 const taskInput = document.getElementById("task-input");
 const addButton = document.getElementById("add-btn");
+const searchvalue=document.getElementById("search");
+const filter = document.getElementById("filter-value");
 function saveTasks(){
     localStorage.setItem("tasks",JSON.stringify(tasks))
 }
@@ -12,7 +14,19 @@ function renderTasks() {
 todo.textContent="";
 progress.textContent="";
 done.textContent="";
-tasks.forEach(task=>{
+const searchInput = searchvalue.value.toLowerCase();
+const filterValue = filter.value;
+searchvalue.addEventListener("input", () => {
+    renderTasks();
+});
+tasks.forEach(task => {
+
+        if (!task.title.toLowerCase().includes(searchInput)) {
+            return;
+        }
+        if (filterValue !== "all" && task.status !== filterValue) {
+    return;
+}
 const card = document.createElement("div");
 card.className = "task";
 card.draggable=true;
@@ -54,6 +68,7 @@ title.textContent = task.title;
  card.appendChild(actions);
 card.appendChild(title);
 
+
  if (task.status === "todo") {
             todo.appendChild(card);
         } else if (task.status === "progress") {
@@ -64,7 +79,6 @@ card.appendChild(title);
 
 })
 }
-
 addButton.addEventListener('click',()=>{
 const title=taskInput.value.trim();
 if(title===""){
@@ -82,6 +96,12 @@ if(title===""){
     renderTasks();
 })
 renderTasks();
+searchvalue.addEventListener("input", () => {
+    renderTasks();
+});
+filter.addEventListener("change", () => {
+    renderTasks();
+});
 todo.addEventListener("dragover", (e) => {
     e.preventDefault();
 });
@@ -93,20 +113,20 @@ progress.addEventListener("dragover", (e) => {
 done.addEventListener("dragover", (e) => {
     e.preventDefault();
 });
-todo.addEventListener("drop",()=>{
+todo.addEventListener("drop",(e)=>{
       if (!dragTask) return;
     dragTask.status = "todo";
     saveTasks();
     renderTasks();
 })
 
-progress.addEventListener("drop",()=>{
+progress.addEventListener("drop",(e)=>{
        if (!dragTask) return;
     dragTask.status = "progress";
     saveTasks();
     renderTasks();
 })
-done.addEventListener("drop",()=>{
+done.addEventListener("drop",(e)=>{
        if (!dragTask) return;
     dragTask.status = "done";
     saveTasks();

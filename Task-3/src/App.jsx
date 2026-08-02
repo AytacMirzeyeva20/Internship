@@ -9,7 +9,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const[search,setSearch]=useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
-
+const [page, setPage] = useState(1);
    useEffect(() => {
   const timer = setTimeout(() => {
     setDebouncedSearch(search);
@@ -18,22 +18,23 @@ function App() {
 }, [search]);
 
 useEffect(() => {
- const url = debouncedSearch
-    ? `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${debouncedSearch}`
-    : `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+const url = debouncedSearch
+  ? `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${debouncedSearch}&page=${page}`
+  : `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${page}`;
 
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
       setMovies(data.results || []);
     });
-}, [debouncedSearch]);
+}, [debouncedSearch,page]);
 
   return (
     <>
       <Navbar />
          <SearchBar search={search} setSearch={setSearch} />
       <ResultList movies={movies} />
+      <Pagination page={page}  setPage={setPage}/>
    
     </>
   );

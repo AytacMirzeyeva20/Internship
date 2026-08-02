@@ -22,11 +22,17 @@ const url = debouncedSearch
   ? `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${debouncedSearch}&page=${page}`
   : `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${page}`;
 
-  fetch(url)
+const control= new AbortController();
+  fetch(url,{
+    signal:control.signal,
+  })
     .then((res) => res.json())
     .then((data) => {
       setMovies(data.results || []);
     });
+    return ()=>{
+      control.abort()
+    };
 }, [debouncedSearch,page]);
 
   return (

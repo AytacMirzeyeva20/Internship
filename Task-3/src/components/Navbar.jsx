@@ -11,7 +11,7 @@ export default function Navbar() {
           </h1>
         </div>
         <nav>
-          <ul className="flex items-center gap-8 text-gray-300">
+          <ul className="hidden items-center gap-8 text-gray-300 md:flex">
             <li className="cursor-pointer transition hover:text-red-500">
               Home
             </li>
